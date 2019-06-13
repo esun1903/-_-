@@ -136,14 +136,14 @@ public class 오목 extends JFrame {
         
        
         clear.addActionListener(e -> clear());
-		String[] states = { "흰 - 사람, 검 - AI", "흰 - AI, 검 - 사람 "};
+		String[] states = { "흰 - AI, 검 - 사람", "흰 - 사람, 검 - AI"};
 		JComboBox<String> stateB = new JComboBox<>(states);
 		stateB.setBackground(Color.white);
 		stateB.addActionListener(e -> {
-			if (((JComboBox<String>)e.getSource()).getSelectedItem() == "컴퓨터 - 백") {
+			if (((JComboBox<String>)e.getSource()).getSelectedItem() == "흰 - AI, 검 - 사람") {
 				startState = 1;
 				AI.setDefense(0.3);
-			} else if (((JComboBox<String>)e.getSource()).getSelectedItem() == "컴퓨터 - 흑"){
+			} else if (((JComboBox<String>)e.getSource()).getSelectedItem() == "흰 - 사람, 검 - AI"){
 				startState = 2;
 				AI.setDefense(0.92);
 			} else {
